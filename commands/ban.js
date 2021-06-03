@@ -1,13 +1,11 @@
 const { Message } = require("discord.js");
 
 module.exports = {
-    name: 'kick',
-    description: 'check if person has ability to kick',
+    name: 'ban',
+    description: 'check if person has ability to ban',
     execute(message,args){
 
     let mod = message.guild.roles.cache.find(r => r.id === "849814795917590588");
-
-    console.log(message.member.user)
 
         if (message.member.hasPermission('BAN_MEMBERS')){
             message.channel.send('You can ban members').catch(console.error);
