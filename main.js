@@ -27,14 +27,20 @@ client.on('message', message =>{
 
     if (command === 'ping'){
         client.commands.get('ping').execute(message,args);
-    } else if (command == 'wednesday'){
+    }else if (command == 'wednesday'){
         client.commands.get('wednesday').execute(message,args);
-    } else if (command == 'kick'){
-        client.commands.get('kick').execute(message,args);
-    }else if (command == 'ban'){
-        client.commands.get('ban').execute(message,args);
+    }else if(command == 'bancheck'){
+        client.commands.get('bancheck').execute(message,args,Discord)
+    }else if(command == 'kickcheck'){
+        client.commands.get('kickcheck').execute(message,args,Discord)
     }else if(command == 'command'){
         client.commands.get('command').execute(message,args,Discord)
+    }else if(command == 'clear'){
+        client.commands.get('clear').execute(message,args,Discord)
+    }else if(command == 'kick'){
+        client.commands.get('kick').execute(message,args,Discord)
+    }else if(command == 'ban'){
+        client.commands.get('ban').execute(message,args,Discord)
     }
 
 });
