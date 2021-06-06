@@ -21,6 +21,7 @@ client.once('ready', () => {
 
 client.on('message', message =>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
+    if (message.channel.id === '850969394283675659' && message.member.roles.cache.has('850970450016206858') ){
 
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
@@ -42,7 +43,9 @@ client.on('message', message =>{
     }else if(command == 'ban'){
         client.commands.get('ban').execute(message,args,Discord)
     }
-
+    }else{
+        message.reply('You can not use the bot');
+    }
 });
 
 client.login('ODQ5MTMyNjU2OTE4NTI4MDMw.YLWuaQ.02yK1HCV6TgrBK3bx_peHu9nvp4');

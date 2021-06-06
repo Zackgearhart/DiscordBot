@@ -6,13 +6,13 @@ module.exports = {
         if (message.member.hasPermission('KICK_MEMBERS')){
             if(member){
             const memberTarget = message.guild.members.cache.get(member.id);
-            message.channel.send(member.username + " has been kicked");
+            message.reply(member.username + " has been kicked");
             memberTarget.kick();
             }else{
-            message.channel.send('You can not kick that member');
+            message.reply('You can not kick that member');
             }
         }else{
-            message.channel.send('You can not do that');
+            message.reply('You can not do that');
         }
     }
 }
