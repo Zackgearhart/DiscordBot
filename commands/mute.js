@@ -25,11 +25,11 @@ module.exports = {
         }, ms(args[1]));}catch(error){
             console.log('ERROR: no number used for time out command');
         }finally{
-            message.reply('use a number');
+            message.reply(args[1] + ' is not a number, use a number.');
             return;
         }
         }else{
-            message.channel.send('cant find that memeber');
+            message.channel.send('cant find that user.');
         }
     }
 }
