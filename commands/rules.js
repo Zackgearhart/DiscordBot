@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'command',
+    name: 'rules',
     description: 'embeds',
     execute(message,args, Discord){
         const newEmbed = new Discord.MessageEmbed()

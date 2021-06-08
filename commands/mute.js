@@ -30,6 +30,7 @@ module.exports = {
         }
         }else{
             message.channel.send('cant find that user.');
+            return;
         }
     }
 }
