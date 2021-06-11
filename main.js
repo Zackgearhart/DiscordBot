@@ -66,4 +66,4 @@ client.on('guildMemberAdd', guildMember =>{
 
 });
 
-client.login('ODQ5MTMyNjU2OTE4NTI4MDMw.YLWuaQ.02yK1HCV6TgrBK3bx_peHu9nvp4');
+client.login(process.env.DJS_TOKEN);
