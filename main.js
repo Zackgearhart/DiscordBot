@@ -8,6 +8,8 @@ const fs = require('fs');
 
 const memberCounter = require('./counters/member-counter');
 
+const config = require('./config.json');
+
 client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
@@ -66,4 +68,4 @@ client.on('guildMemberAdd', guildMember =>{
 
 });
 
-client.login(process.env.DJS_TOKEN);
+client.login(config.token);
